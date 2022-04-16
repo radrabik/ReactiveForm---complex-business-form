@@ -4,10 +4,24 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { CreateCourseComponent } from './create-course/create-course.component';
+
+import { CreateCourseStep1Component } from './create-course/create-course-step-1/create-course-step-1.component';
+import { CreateCourseStep2Component } from './create-course/create-course-step-2/create-course-step-2.component';
+import { CreateCourseStep3Component } from './create-course/create-course-step-3/create-course-step-3.component';
+
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  imports:      [ BrowserModule, FormsModule, MatStepperModule ],
+  declarations: [ 
+    AppComponent, 
+    HelloComponent, 
+    CreateCourseComponent,
+    CreateCourseStep1Component,
+    CreateCourseStep2Component,
+    CreateCourseStep3Component 
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
