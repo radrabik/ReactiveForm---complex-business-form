@@ -12,6 +12,7 @@ import { CreateCourseStep2Component } from './create-course/create-course-step-2
 import { CreateCourseStep3Component } from './create-course/create-course-step-3/create-course-step-3.component';
 
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   imports: [ 
@@ -19,6 +20,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     FormsModule, 
     BrowserAnimationsModule, 
     MatStepperModule,
+    MatFormFieldModule,
     ReactiveFormsModule
   ],
   declarations: [ 
