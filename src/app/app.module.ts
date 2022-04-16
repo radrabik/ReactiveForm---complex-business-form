@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -13,7 +14,7 @@ import { CreateCourseStep3Component } from './create-course/create-course-step-3
 import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, MatStepperModule ],
+  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule, MatStepperModule ],
   declarations: [ 
     AppComponent, 
     HelloComponent, 
