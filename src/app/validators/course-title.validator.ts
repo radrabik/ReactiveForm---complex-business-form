@@ -1,4 +1,4 @@
-import { AsyncValidatorFn } from '@angular/forms';
+import { AsyncValidatorFn, AbstractControl } from '@angular/forms';
 import { CoursesService } from '../services/courses.service';
 import {map} from 'rxjs/operators';
 
