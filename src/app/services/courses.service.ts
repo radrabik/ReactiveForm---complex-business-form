@@ -5,6 +5,7 @@ import {Course} from "../model/course";
 import {map} from "rxjs/operators";
 import {Lesson} from "../model/lesson";
 
+const localUrl = 'assets/data/categories.json';
 
 @Injectable()
 export class CoursesService {
@@ -18,7 +19,7 @@ export class CoursesService {
     }
 
     findCourseCategories() {
-      return this.http.get(`/api/course-categories`)
+      return this.http.get(localUrl)
         .pipe(
           map(res => res["categories"])
         );
