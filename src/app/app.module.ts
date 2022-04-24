@@ -15,14 +15,12 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from "@angular/material/button";
 import { MatDialogModule } from "@angular/material/dialog"
-
 import { CoursesService } from './services/courses.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -34,12 +32,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerModule,
     ReactiveFormsModule,
     MatCheckboxModule,
     MatSelectModule,
     HttpClientModule,
     MatRadioModule,
+    MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
     MatDialogModule
