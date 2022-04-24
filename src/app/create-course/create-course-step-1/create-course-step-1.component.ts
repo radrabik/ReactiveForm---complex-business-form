@@ -24,11 +24,11 @@ export class CreateCourseStep1Component implements OnInit {
             asyncValidators: []
           }
       ],
-      category: ['BEGINNER', Validators.required],
       releasedAt: [new Date(), {
         validators: [Validators.required]
         },
       ],
+      category: ['BEGINNER', Validators.required],
       downloadsAllowed: [false, {
         validators: [Validators.required]
         },
