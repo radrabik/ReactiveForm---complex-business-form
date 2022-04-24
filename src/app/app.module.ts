@@ -19,6 +19,7 @@ import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { CoursesService } from './services/courses.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCheckboxModule,
     MatSelectModule,
     HttpClientModule,
-    MatRadioModule
+    MatRadioModule,
+    MatNativeDateModule
     
   ],
   declarations: [ 
