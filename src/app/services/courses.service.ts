@@ -5,7 +5,7 @@ import {Course} from "../model/course";
 import {map} from "rxjs/operators";
 import {Lesson} from "../model/lesson";
 
-const localUrl = 'assets/data/categories.json';
+const localUrl = 'assets/categories.json';
 
 @Injectable()
 export class CoursesService {
