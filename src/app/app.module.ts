@@ -20,6 +20,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from "@angular/material/button";
 
 import { CoursesService } from './services/courses.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     HttpClientModule,
     MatRadioModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatButtonModule
     
   ],
   declarations: [ 
