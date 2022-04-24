@@ -18,9 +18,19 @@ export class CreateCourseStep1Component implements OnInit {
         asyncValidators: []
       }
    ],
-   releasedAt: [new Date(), Validators.required],
-   downloadsAllowed: [false, Validators.requiredTrue],
-   longDescription: ['', Validators.required, Validators.minLength(3)]
+   releasedAt: [new Date(), {
+    validators: [Validators.required]
+    },
+   ],
+   downloadsAllowed: [false, {
+    validators: [Validators.required]
+    },
+   ],
+   longDescription: ['', {
+      validators: [Validators.required, Validators.minLength(3)]
+      }
+   ]
+   
   });
 
   constructor(private fb: FormBuilder, private courses:CoursesService) { }
