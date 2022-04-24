@@ -18,6 +18,25 @@ export class CreateCourseStep2Component implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+
+    // the form emits an observable each time there is a new value (valid or invalid)
+    this.form.valueChanges
+      .subscribe(val => {
+
+        const priceControl = this.form.controls['price'];
+
+        // if 'courseType' value is 'free' & priceControl is enabled =>  disable priceControl
+        if (val.courseType == 'free' && priceControl.enabled) {
+          // disable priceControl input and make sure that no event is triggered => avoiding infinite loops
+          priceControl.disable({emitEvent: false});
+        }
+        else if (val.courseType == 'premium' && priceControl.disabled) {
+          priceControl.enable({emitEvent: false})
+        }
+
+
+      });
+
   }
 
 }
