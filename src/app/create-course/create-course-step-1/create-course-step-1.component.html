@@ -26,6 +26,20 @@
 
     </mat-form-field>
 
+    <!-- Dropdown with categories -->
+    <mat-form-field placeholder="Select category">
+
+      <!-- manually defined-->
+      <mat-option [value]="BEGINNER">Beginner</mat-option>
+      <mat-option [value]="ADVANCED">Beginner</mat-option>
+
+      <!-- backend options -->
+      <ng-container *ngFor="let category of (courseCategories$ | async)">
+        <mat-option [value]="category.code">{{ category.description }}</mat-option>
+      </ng-container>
+
+    </mat-form-field>
+
     <!-- checkbox -->
     <mat-checkbox color="primary" formControlName="downloadsAllowed">
       Downloads Allowed?
