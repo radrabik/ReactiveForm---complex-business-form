@@ -14,8 +14,11 @@ import { CreateCourseStep3Component } from './create-course/create-course-step-3
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
+import { CoursesService } from './services/courses.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [ 
@@ -25,7 +28,9 @@ import {MatInputModule} from '@angular/material/input';
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    MatDatepickerModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [ 
     AppComponent, 
@@ -35,6 +40,7 @@ import {MatInputModule} from '@angular/material/input';
     CreateCourseStep2Component,
     CreateCourseStep3Component 
   ],
+  providers: [CoursesService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
