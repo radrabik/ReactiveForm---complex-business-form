@@ -28,19 +28,10 @@
       The start date must be before the end Date
     </mat-error>
 
-
-    <!-- Invalid Date Messages -->
-    <mat-error *ngIf="form.controls.fromDate.hasError('matStartDateInvalid')">Invalid start date</mat-error>
-    <mat-error *ngIf="form.controls.toDate.hasError('matEndDateInvalid')">Invalid end date</mat-error>
-
-    <!-- Required Date Messages -->
-    <mat-error *ngIf="form.controls.fromDate.errors?.required">From Date Required</mat-error>
-    <mat-error *ngIf="form.controls.toDate.errors?.required">To Date Required</mat-error>
-
   </mat-form-field>
 
   <div>
-    {{ form.value | json }}
+    {{ form.value | json }}, {{ form.errors | json }}
   </div>
 </div>
 
