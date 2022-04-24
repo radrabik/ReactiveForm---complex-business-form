@@ -18,7 +18,7 @@ export class CreateCourseStep2Component implements OnInit {
     toDate: ['', Validators.required]
   }, {
     validators: [createPromoRangeValidator()],
-    updateOn: 'blur'
+    updateOn: 'blur'  // validates it after user finished with interaction
   }
   
   );
