@@ -15,7 +15,7 @@ export class CreateCourseStep1Component implements OnInit {
         validators: [Validators.required, Validators.minLength(5), Validators.maxLength(60)],
         // Asynchronous validator (backend call to check if course with the same title exists)
         // ValidatorFN expects the instance of backend service
-        asyncValidators: [coursetitleValidator(this.courses)]
+        asyncValidators: []
       }
    ],
    releasedAt: [new Date(), Validators.required],
