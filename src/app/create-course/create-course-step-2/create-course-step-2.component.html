@@ -23,6 +23,12 @@
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
 
+    <!-- Start Date after End Date error -->
+    <mat-error *ngIf="form.errors?.promoPeriod && form.dirty">
+      The start date must be before the end Date
+    </mat-error>
+
+
     <!-- Invalid Date Messages -->
     <mat-error *ngIf="form.controls.fromDate.hasError('matStartDateInvalid')">Invalid start date</mat-error>
     <mat-error *ngIf="form.controls.toDate.hasError('matEndDateInvalid')">Invalid end date</mat-error>

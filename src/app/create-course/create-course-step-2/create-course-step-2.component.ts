@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { createPromoRangeValidator } from '../../validators/data-range.validator';
 
 @Component({
   selector: 'app-create-course-step-2',
@@ -15,7 +16,12 @@ export class CreateCourseStep2Component implements OnInit {
     }],
     fromDate: ['', Validators.required],
     toDate: ['', Validators.required]
-  });
+  }, {
+    validators: [createPromoRangeValidator()],
+    updateOn: 'blur'
+  }
+  
+  );
 
 
 
