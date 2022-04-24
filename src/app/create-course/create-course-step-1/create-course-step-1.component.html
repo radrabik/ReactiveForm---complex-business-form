@@ -29,9 +29,10 @@
     <!-- Dropdown with categories -->
     <mat-form-field placeholder="Select category" formControlName="category">
 
-      <!-- manually defined-->
+      <!-- manually defined
       <mat-option [value]="BEGINNER">Beginner</mat-option>
       <mat-option [value]="ADVANCED">Beginner</mat-option>
+      -->
 
       <!-- backend options -->
       <ng-container *ngFor="let category of (courseCategories$ | async)">
