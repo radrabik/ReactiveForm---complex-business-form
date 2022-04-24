@@ -17,7 +17,8 @@ export class CreateCourseStep1Component implements OnInit {
         // ValidatorFN expects the instance of backend service
         asyncValidators: [coursetitleValidator(this.courses)]
       }
-   ] 
+   ],
+   releasedAt: [new Date(), Validators.required] 
   });
 
   constructor(private fb: FormBuilder, private courses:CoursesService) { }

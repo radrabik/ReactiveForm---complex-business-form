@@ -16,12 +16,17 @@
 
   <mat-form-field>
   
-    <input matInput [matDatepicker]="releaseDatePicker" placeholder="Release data">
+    <input matInput [matDatepicker]="releaseDatePicker" 
+        formControlName="releasedAt"
+        placeholder="Release data">
     
     <mat-datepicker-toggle [for]="releaseDatePicker"></mat-datepicker-toggle>
     <mat-datepicker #releaseDatePicker></mat-datepicker>
 
   </mat-form-field>
 
+  <div> 
+    {{ form.value | json }}
+  </div>
 
 </div>

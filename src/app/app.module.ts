@@ -15,6 +15,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 
 import { CoursesService } from './services/courses.service';
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatDatepickerModule,
     ReactiveFormsModule,
+    MatMomentDateModule,
     HttpClientModule
   ],
   declarations: [ 
