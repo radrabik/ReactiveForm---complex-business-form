@@ -44,6 +44,7 @@ export class CreateCourseStep1Component implements OnInit {
   constructor(private fb: FormBuilder, private courses:CoursesService) { }
 
   ngOnInit() {
+    this.courseCategories$ = this.courses.findCourseCategories();
   }
 
   get courseTitle() {
