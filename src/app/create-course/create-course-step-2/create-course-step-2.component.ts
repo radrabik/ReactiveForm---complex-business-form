@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-create-course-step-2',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateCourseStep2Component implements OnInit {
 
-  constructor() { }
+  form = this.fb.group({
+
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
