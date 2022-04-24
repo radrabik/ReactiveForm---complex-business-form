@@ -25,6 +25,20 @@
       <mat-datepicker #releaseDatePicker></mat-datepicker>
 
     </mat-form-field>
+
+    <!-- checkbox -->
+    <mat-checkbox color="primary">
+      Downloads Allowed?
+    </mat-checkbox>
+
+    <!-- textarea -->
+    <mat-form-field appearance="outline">
+
+      <textarea matInput placeholder="Description" formControlName="longDescription">
+      <textarea>
+
+    <mat-form-field>
+    
   
   <div> 
     {{ form.value | json }}
