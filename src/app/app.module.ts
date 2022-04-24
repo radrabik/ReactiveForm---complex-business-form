@@ -21,6 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from "@angular/material/button";
+import { MatDialogModule } from "@angular/material/dialog"
 
 import { CoursesService } from './services/courses.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -41,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MatRadioModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
     
   ],
   declarations: [ 
