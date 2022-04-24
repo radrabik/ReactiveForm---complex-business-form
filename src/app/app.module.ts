@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
 
 import { CoursesService } from './services/courses.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatMomentDateModule,
     MatCheckboxModule,
+    MatSelectModule,
     HttpClientModule,
     
   ],
