@@ -3,11 +3,11 @@
   <!-- Radio group Free/Premium-->
   <mat-radio-group formControlName="courseType">
     <mat-radio-button value="free">Free</mat-radio-button>
-    <mat-radio-button value="premium">Premium</mat-radio-button>
+    <mat-radio-button value="premium" #premium>Premium</mat-radio-button>
   </mat-radio-group>
 
   <mat-form-field>
-    <input type="number" matInput placeholder="Price" formControlName="price">
+    <input type="number" matInput placeholder="Price" formControlName="price" disabled>
   </mat-form-field>
   
 
