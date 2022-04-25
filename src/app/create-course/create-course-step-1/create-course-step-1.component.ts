@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { CoursesService } from '../../services/courses.service';
 import { coursetitleValidator } from '../../validators/course-title.validator';
 
@@ -46,6 +47,24 @@ export class CreateCourseStep1Component implements OnInit {
 
   ngOnInit() {
     this.courseCategories$ = this.courses.findCourseCategories();
+
+
+    // if cached draft of form exists in local storage => prepopulate all fields
+    const draft = localStorage.getItem("STEP_1");
+    if(draft) {
+      this.form.setValue(JSON.parse(draft));
+    }
+
+    // save form field into local storage if values are valid
+    this.form.valueChanges
+    .pipe(
+      // filter the changes which are not valid using .pipe
+      // only when inputs are valid we will save them
+      filter(()=> this.form.valid)
+    )
+    .subscribe( val => {
+      localStorage.setItem("STEP_1", JSON.stringify(val))
+    });
   }
 
   get courseTitle() {
