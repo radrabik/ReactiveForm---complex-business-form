@@ -20,9 +20,11 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from "@angular/material/button";
-import { MatDialogModule } from "@angular/material/dialog"
+import { MatDialogModule } from "@angular/material/dialog";
+import {MatIconModule} from '@angular/material/icon';
 import { CoursesService } from './services/courses.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   imports: [ 
@@ -40,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule
     
   ],
   declarations: [ 
@@ -49,7 +52,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreateCourseComponent,
     CreateCourseStep1Component,
     CreateCourseStep2Component,
-    CreateCourseStep3Component 
+    CreateCourseStep3Component,
+    FileUploadComponent
   ],
   providers: [CoursesService],
   bootstrap:    [ AppComponent ]

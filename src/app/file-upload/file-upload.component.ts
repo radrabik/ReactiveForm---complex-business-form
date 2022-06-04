@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-file-upload',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./file-upload.component.css']
 })
 export class FileUploadComponent implements OnInit {
+
+  @Input() requiredFileType: string
+  fileName = "";
 
   constructor() { }
 
