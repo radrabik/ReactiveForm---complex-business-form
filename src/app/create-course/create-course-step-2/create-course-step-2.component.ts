@@ -14,11 +14,12 @@ export class CreateCourseStep2Component implements OnInit {
     price: [null, {
       validators: [Validators.required, Validators.min(1), Validators.max(9999), Validators.pattern("[0-9]+") ]
     }],
+    thumbnail: [null],
     fromDate: ['', Validators.required],
     toDate: ['', Validators.required]
   }, {
     validators: [createPromoRangeValidator()],
-    updateOn: 'blur'  // validates it after user finished with interaction
+    // updateOn: 'blur'  // validates it after user finished with interaction but should not be used with file upload
   }
   
   );
