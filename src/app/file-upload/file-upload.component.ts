@@ -1,6 +1,6 @@
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
-import { catchError } from 'rxjs/operators';
+import { catchError, finalize } from 'rxjs/operators';
 import {of} from 'rxjs';
 
 @Component({
@@ -41,7 +41,11 @@ export class FileUploadComponent implements OnInit {
         catchError(error => {
           this.fileUploadError = true;
           return of(error)
-        })
+        }),
+        finalize(() => {
+          // show some progress even no upload
+          this.uploadProgress = null;
+        }),
       )
       .subscribe(event => {
         if (event.type == HttpEventType.UploadProgress) {
