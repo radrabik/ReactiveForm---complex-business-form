@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import {of} from 'rxjs';
@@ -33,14 +33,21 @@ export class FileUploadComponent implements OnInit {
 
       const formData = new FormData();
       formData.append("thumbnail", file)
-      this.http.post('/api/thumbnail-upload', formData)
+
+      // observing events rather than values directly from the backend
+      // by default "observe: events" reports only final response but by setting reportProgress we also get progress
+      this.http.post('/api/thumbnail-upload', formData, { reportProgress: true, observe: 'events'})
       .pipe(
         catchError(error => {
           this.fileUploadError = true;
           return of(error)
         })
       )
-      .subscribe();
+      .subscribe(event => {
+        if (event.type == HttpEventType.UploadProgress) {
+          this.uploadProgress = Math.round(100 * (event.loaded / event.total))
+        }
+      });
 
     }
   
