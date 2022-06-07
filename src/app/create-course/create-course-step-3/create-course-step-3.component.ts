@@ -9,6 +9,7 @@ import { FormBuilder } from '@angular/forms';
 export class CreateCourseStep3Component implements OnInit {
 
   form = this.fb.group({
+    lessons: this.fb.array([])
 
   });
 
