@@ -5,9 +5,10 @@
 
     <ng-container formArrayName="lessons">
 
+        <!-- Loop through Form Array -->
         <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
 
-            <div class="lesson-form-row" [formGroup]="lessonForm">
+            <div class="lesson-form-row" [formGroupName]="i">
 
                 <mat-form-field appearance="fill">
 

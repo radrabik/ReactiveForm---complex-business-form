@@ -12,4 +12,9 @@ export class CreateCourseComponent implements OnInit {
   ngOnInit() {
   }
 
+  submit(step1, step2, step3) {
+    console.log(typeof(step1), step2, step3)
+
+  }
+
 }
