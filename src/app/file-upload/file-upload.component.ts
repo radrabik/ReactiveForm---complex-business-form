@@ -107,7 +107,7 @@ export class FileUploadComponent implements OnInit, ControlValueAccessor, Valida
 
   }
 
-  registerOnValidatorChange(fn: () => void): void {
+  registerOnValidatorChange(onValidatorChange: () => void): void {
     // notify the parent form that some value has changed
     this.onValidatorChange = onValidatorChange;
 
